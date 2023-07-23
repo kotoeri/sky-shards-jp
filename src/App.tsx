@@ -6,6 +6,7 @@ import { SettingsProvider } from './context/Settings';
 import Footer from './sections/App/Footer';
 import Header from './sections/App/Header';
 import ShardCarousel from './sections/Shard/Carousel';
+import {FormattedMessage} from 'react-intl';
 
 function ErrorFallback({ error }: FallbackProps) {
   const commitSha = import.meta.env.VITE_GIT_COMMIT ?? 'undefiend';
