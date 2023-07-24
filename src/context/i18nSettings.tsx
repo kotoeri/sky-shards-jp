@@ -31,10 +31,10 @@ const getMessages = (locale: string): {[key: string]: string} => {
   }
 };
 
+export const localeZone = getLocale();
 export const IntlProviderWrapper = ({children}: {children: ReactNode}) => {
-  const locale = getLocale();
   return (
-    <IntlProvider locale={locale} messages={getMessages(locale)}>
+    <IntlProvider locale={localeZone} messages={getMessages(localeZone)}>
       {children}
     </IntlProvider>
   );

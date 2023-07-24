@@ -2,6 +2,7 @@ import { ComponentPropsWithoutRef, ReactNode, CSSProperties, useState, useCallba
 import { BiLinkExternal } from 'react-icons/bi';
 import { BsDiscord } from 'react-icons/bs';
 import { ShardInfo } from '../../shardPredictor';
+import {useIntl, FormattedMessage} from 'react-intl';  // for localize
 
 interface ShardInfographicsProps {
   title: string;
@@ -78,12 +79,12 @@ const ClementShardMapRecords: Record<string, string> = {
 interface ShardMapInfographic {
   info: ShardInfo;
 }
-
 export function ShardMapInfographic({ info }: ShardMapInfographic) {
   const map = ClementShardMapRecords[info.map];
+  const intl = useIntl();
   return (
     <ShardInfographics
-      title="Clement's Map"
+      title={intl.formatMessage({ id: "infographics.title", defaultMessage: "Clement's Map" })}
       image={map}
       imageAlt={info.map}
       credits={
@@ -99,7 +100,7 @@ export function ShardMapInfographic({ info }: ShardMapInfographic) {
             <BsDiscord style={{ display: 'inline' }} />
           </p>
           <p>
-            <span>Click here to Join Server </span>
+            <span><FormattedMessage id='infographics.join' defaultMessage="Click here to Join Server " /></span>
             <BiLinkExternal style={{ display: 'inline' }} />
           </p>
         </div>
@@ -137,9 +138,10 @@ interface ShardDataInfographic {
 
 export function ShardDataInfographic({ info }: ShardDataInfographic) {
   const data = GaleShardDataRecords[info.map];
+  const intl = useIntl();
   return (
     <ShardInfographics
-      title="Gale's Shard Data"
+      title={intl.formatMessage({ id: "shardInfographics.title", defaultMessage: "Gale's Shard Data"})}
       image={data}
       imageAlt={info.map}
       credits={

@@ -1,6 +1,7 @@
 import { DateTime } from 'luxon';
 import { useNow } from '../context/Now';
 import { useSettings } from '../context/Settings';
+import {FormattedMessage} from 'react-intl';  // for localize
 import './Date.css';
 
 interface DateProp {
@@ -34,9 +35,9 @@ export default function Date({
         <span className='Date'>
           {
             {
-              '-1': 'Yesterday',
-              '0': 'Today',
-              '1': 'Tomorrow',
+              '-1': <FormattedMessage id='yesterday' defaultMessage='Yesterday' />,
+              '0': <FormattedMessage id='today' defaultMessage='Today' />,
+              '1': <FormattedMessage id='tomorrow' defaultMessage='Tomorrow' />,
             }[howClose.toString()]
           }
         </span>

@@ -7,6 +7,7 @@ import { useHeaderFx } from '../../context/HeaderFx';
 import { useModal } from '../../context/ModalContext';
 import Announcement_V4 from '../Modals/Announcement_V4';
 import SettingsModal from '../Modals/Settings';
+import {FormattedMessage} from 'react-intl';  // for localize
 
 export default function Header() {
   const { showModal } = useModal();
@@ -28,7 +29,7 @@ export default function Header() {
   return (
     <header id='header' className='glass'>
       <a id='title' href='/' onClick={e => (navigateToday(), e.preventDefault())}>
-        <span>Sky Shards</span>
+        <span><FormattedMessage id='header.title' defaultMessage='Sky Shards' /></span>
       </a>
 
       <time dateTime={DateTime.utc().toISO() ?? undefined} id='header-dateTime' onClick={navigateToday}>

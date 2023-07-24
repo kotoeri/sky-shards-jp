@@ -5,8 +5,9 @@ import Clock from '../../components/Clock';
 import Date from '../../components/Date';
 import { useNow } from '../../context/Now';
 import { getAllShardFullPhases, ShardFullPhases, ShardInfo } from '../../shardPredictor';
+import {useIntl, FormattedMessage} from 'react-intl';  // for localize
 
-const ordinalMap = ['1st', '2nd', '3rd'] as const;
+const ordinalMap = [<FormattedMessage id='1st' defaultMessage='1st' />, <FormattedMessage id='2nd' defaultMessage='2nd' />, <FormattedMessage id='3rd' defaultMessage='3rd' />] as const;
 
 const phasesOrder: (keyof ShardFullPhases)[] = ['earlySky', 'start', 'land', 'end'];
 
@@ -49,7 +50,7 @@ export default function ShardTimeline({ date, info }: ShardTimelineSectionProp) 
   return (
     <section id='shardTimeline' className='glass'>
       <h1 className='title'>
-        <span>Timeline for </span>
+        <span><FormattedMessage id='timeline.title' defaultMessage='Timeline for ' /></span>
         <Date date={date} describeClose />
       </h1>
       <div className='timelines'>
@@ -63,9 +64,9 @@ export default function ShardTimeline({ date, info }: ShardTimelineSectionProp) 
                 onClick={() => (expanded.current[occurIndex] = !expanded.current[occurIndex])}
               >
                 <span className='timeline-header-text'>
-                  <span className='title'>{ordinalMap[occurIndex]} shard </span>
+                  <span className='title'>{ordinalMap[occurIndex]}<FormattedMessage id='Shard' defaultMessage='Shard' /></span>
                   <span className='mini-clock'>
-                    (<span>Landing {miniClockType < 2 ? `[${miniClockType ? 'Your ' : 'Sky '} Time]:` : 'in'} </span>
+                    (<span><FormattedMessage id='timeline.Landing' defaultMessage='Landing ' />{miniClockType < 2 ? `[${miniClockType ? 'Your ' : 'Sky '} Time]:` : 'in'} </span>
                     <Clock
                       date={phases.land}
                       inline
@@ -96,16 +97,16 @@ export default function ShardTimeline({ date, info }: ShardTimelineSectionProp) 
 
                       {/* Content */}
                       <div className='timeline-item-content'>
-                        <h3 className='timeline-item-header'>{phasesName[pName]}</h3>
+                        <h3 className='timeline-item-header'><FormattedMessage id={'timeline.' + pName} /></h3>
                         <time dateTime={phases[pName].toISO() ?? undefined}>
                           <p>
-                            Relative: <Clock date={phases[pName]} inline relative twoUnits />
+                            <FormattedMessage id='timeline.Relative' defaultMessage='Relative: ' /> <Clock date={phases[pName]} inline relative twoUnits />
                           </p>
                           <p>
-                            Sky Time: <Clock date={phases[pName]} inline hideSeconds />
+                            <FormattedMessage id='timeline.skytime' defaultMessage='Sky Time: ' /> <Clock date={phases[pName]} inline hideSeconds />
                           </p>
                           <p>
-                            Your Time: <Clock date={phases[pName]} inline local hideSeconds />
+                            <FormattedMessage id='timeline.yourtime' defaultMessage='Your Time: ' /> <Clock date={phases[pName]} inline hideSeconds /><Clock date={phases[pName]} inline local hideSeconds />
                           </p>
                         </time>
                       </div>

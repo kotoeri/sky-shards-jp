@@ -7,6 +7,7 @@ import { getShardInfo, findNextShard } from '../../shardPredictor';
 import { ShardMapInfographic, ShardDataInfographic } from './Infographic';
 import ShardSummary from './Summary';
 import ShardTimeline from './Timeline';
+import {FormattedMessage} from 'react-intl';  // for localize
 
 const appZone = 'America/Los_Angeles';
 
@@ -167,11 +168,11 @@ export default function ShardCarousel() {
         </motion.main>
       </AnimatePresence>
       <div id='leftNavHint' className='navHint' onClick={() => navigateDate(-1)}>
-        <span>Swipe right or Click here for previous shard</span>
+        <span><FormattedMessage id='previous.shard'  defaultMessage='Swipe right or Click here for previous shard'/></span>
         <BsChevronRight />
       </div>
       <div id='rightNavHint' className='navHint' onClick={() => navigateDate(1)}>
-        <span>Swipe left or Click here for next shard</span>
+        <span><FormattedMessage id='next.shard'  defaultMessage='Swipe right or Click here for previous shard'/></span>
         <BsChevronLeft />
       </div>
     </div>
