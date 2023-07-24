@@ -92,16 +92,15 @@
   "2nd":"2nd shard",
   "3rd":"3rd shard",
 
-
-  "hideWeekday" : "",
-  "ShortWeekday":"ccc",
-  "LongWeekday":"cccc",
+  "hidneWeek" : "",
+  "ShortWeek":"EEE,",
+  "LongWeek":"EEEE,",
   "ShortDay" :" dd",
   "LongDay":" d",
   "ShortMonth":" MMM",
   "LongMonth":" MMMM",
-  "hideYear":"",
+  "noYear":"",
   "shortYear":" yy",
-  "LongYear":"yyyy",
+  "LongYear":", yyyy",
   "reset": "Reset"
 }

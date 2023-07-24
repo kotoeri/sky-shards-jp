@@ -1,15 +1,15 @@
 import * as React from 'react';
-// import React from "react";
-
-import ja from '../../lang/ja.json';
-import en from '../../lang/en.json';
 import {IntlProvider} from 'react-intl';
 import {ReactNode} from 'react';
+
+// localize json data
+import ja from './lang/ja.json';
+import en from './lang/en.json';
 
 const SUPPORTED_LOCALE = ['ja', 'en'];
 const DEFAULT_LOCALE = 'en';
 
-const getLocale = (): string => {
+const geti18nLocale = (): string => {
   const languageCode = navigator.language.split(/[-_]/)[0];
   if (SUPPORTED_LOCALE.indexOf(languageCode) !== -1) {
     return languageCode;
@@ -31,10 +31,10 @@ const getMessages = (locale: string): {[key: string]: string} => {
   }
 };
 
-export const localeZone = getLocale();
+export const geti18nlocaleZone = geti18nLocale();
 export const IntlProviderWrapper = ({children}: {children: ReactNode}) => {
   return (
-    <IntlProvider locale={localeZone} messages={getMessages(localeZone)}>
+    <IntlProvider locale={geti18nlocaleZone} messages={getMessages(geti18nlocaleZone)}>
       {children}
     </IntlProvider>
   );
