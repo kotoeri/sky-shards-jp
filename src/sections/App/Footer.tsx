@@ -4,6 +4,7 @@ import { BsGithub } from 'react-icons/bs';
 import { TbForms } from 'react-icons/tb';
 import { AnimatePresence, motion } from 'framer-motion';
 import { patternCredits } from '../../data/credits';
+import { FormattedMessage} from 'react-intl';  // for localize
 
 const SkyClockImg = <img className='ml-auto mt-1.5 h-4 w-4' src='/ext/sky-clock.png' />;
 
@@ -49,6 +50,7 @@ const subfooters = [
               </span>
             </a>
           </p>
+          <p className='text-center text-sm'><FormattedMessage id='contact.jp' defaultMessage="" /></p>
         </div>
         <div className='mt-1 flex max-w-fit flex-row flex-wrap items-center justify-center gap-1'>
           <a

@@ -1,4 +1,17 @@
 {
+  "V4Announcement.title": "V4 Announcement",
+  "V4Announcement.1": "Hi Skykids!",
+  "V4Announcement.2": ", Plutoy here.",
+  "V4Announcement.3": "Sky shards has been upgraded to ",
+  "V4Announcement.4": "V4! Hurray",
+  "V4Announcement.5": "It was previously released, but got rolled back as it was buggy.",
+  "V4Announcement.6.1": "It&apos;s now back, and ",
+  "V4Announcement.6.2": "hopefully",
+  "V4Announcement.6.3": " it&apos;s better than ever!",
+  "V4Announcement.7": " It might still have bugs though, so please report them to me.",
+  "V4Announcement.8": "You can find the a feedback Google Form at the bottom of the page.",
+  "V4Announcement.9": "Thank you",
+
   "header.title": "Sky Shards",
   "previous.shard": "Swipe right or Click here for previous shard",
   "next.shard": "Swipe right or Click here for previous shard",

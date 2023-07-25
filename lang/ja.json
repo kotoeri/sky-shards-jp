@@ -1,4 +1,18 @@
 {
+  "V4Announcement.title": "V4のお知らせ",
+  "V4Announcement.1": "星の子の皆さん、",
+  "V4Announcement.2": "こんにちは。",
+  "V4Announcement.3": "Sky 砕ケル闇ノ破片が アップグレードされました！",
+  "V4Announcement.4": "V4 やったね！",
+  "V4Announcement.5": "以前リリースしていたのですが、バグが多かったためロールバックされていました。",
+  "V4Announcement.6.1": "それが復活しました。これまで以上に",
+  "V4Announcement.6.2": "良くなっていると期待",
+  "V4Announcement.6.3": "しています。",
+  "V4Announcement.7": "まだバグがあるかもしれないので、ぜひ報告してください。",
+  "V4Announcement.8": "日本語版については Discord： kotoeri まで DM 下さい。",
+  "V4Announcement.9": "ありがとうございました。",
+  "contact.jp": "日本語版は Discord：kotoeri までDM下さい",
+
   "header.title": "Sky 砕ケル闇ノ破片",
   "previous.shard": "右にスワイプするか、ここをクリックして以前の破片を表示",
   "next.shard": "左にスワイプするか、ここをクリックして次の破片を表示",
