@@ -50,7 +50,7 @@ const subfooters = [
               </span>
             </a>
           </p>
-          <p className='text-center text-sm'><FormattedMessage id='contact.jp' defaultMessage="" /></p>
+          <p className='text-center text-xs md:text-sm'><FormattedMessage id='contact.jp' defaultMessage="" /></p>
         </div>
         <div className='mt-1 flex max-w-fit flex-row flex-wrap items-center justify-center gap-1'>
           <a

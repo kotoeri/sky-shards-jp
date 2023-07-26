@@ -1,7 +1,7 @@
 {
   "V4Announcement.title": "V4のお知らせ",
   "V4Announcement.1": "星の子の皆さん、",
-  "V4Announcement.2": "こんにちは。",
+  "V4Announcement.2": "こんにちは、Plutoy です。",
   "V4Announcement.3": "Sky 砕ケル闇ノ破片が アップグレードされました！",
   "V4Announcement.4": "V4 やったね！",
   "V4Announcement.5": "以前リリースしていたのですが、バグが多かったためロールバックされていました。",
@@ -72,7 +72,7 @@
   "shardSummary.haslandedago":" が経過しました。",
   "shardSummary.haslandedend1":"予想される",
   "shardSummary.haslandedend2":"残り時間：",
-  "shardSummary.willlandin1":" がこの時間経過後に",
+  "shardSummary.willlandin1":" がこの時間後に",
   "shardSummary.willlandin2":"堕ちるでしょう",
   "shardSummary.whichis":"終了/ 開始 予定時刻：",
   "shardSummary.YourTime":"設定時計：",
@@ -81,7 +81,7 @@
   "shardSummary.endedago":"時間前に全て終わりました",
   "shardSummary.NoShard1":"この日に",
   "shardSummary.NoShard2":"破片が堕ちる予定はありません",
-  "shardSummary.Scrolldown":"詳細はここをクリックするか、下にスクロールしてください。",
+  "shardSummary.Scrolldown":"詳細はここをクリック/スクロール",
 
   "timeline.title":"タイムライン：",
   "timeline.Landing":"各種時計：",
